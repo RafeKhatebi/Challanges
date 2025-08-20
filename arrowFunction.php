@@ -17,5 +17,5 @@ echo "The sum of the two numbers is : " . $add(1, 5);
 
 //Arrow functions are a new feature in PHP 7.4 that provide a concise syntax for writing anonymous functions. They are similar to lambda functions in other languages, but with some differences. Arrow functions are also known as closures.
 
-//1.	Check Odd or Even
-// Write a program that takes a number as input and checks if it is odd or even.
+
+
