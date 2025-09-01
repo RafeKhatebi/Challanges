@@ -6,12 +6,11 @@
 echo "Enter the first number: ";
 $num1 = trim(fgets(STDIN));
 // stdin means 
-
+//
 echo "Enter the second number: ";
 $num2 = trim(fgets(STDIN));
 
 // Convert inputs to numbers
-//floatval means 
 $num1 = floatval($num1);
 $num2 = floatval($num2);
 
