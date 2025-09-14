@@ -57,11 +57,39 @@ function findLargestAndSmallest($numbers)
 echo "<br>";
 print_r(findLargestAndSmallest($numbers));
 // 9) Fibonacci Sequence
-function fibonacci($number)
+
+// Print first N Fibonacci numbers using a loop
+function printFibonacci($n)
 {
-    $fibonacci = [0, 1];
-    for ($i = 2; $i < $number; $i++) {
-        $fibonacci[$i] = $fibonacci[$i - 1] + $fibonacci[$i - 2];
+    $first = 0;
+    $second = 1;
+
+    if ($n >= 1)
+        echo $first . " ";
+    if ($n >= 2)
+        echo $second . " ";
+
+    for ($i = 3; $i <= $n; $i++) {
+        $next = $first + $second;
+        echo $next . " ";
+        $first = $second;
+        $second = $next;
     }
-    return $fibonacci;
 }
+
+// مثال: چاپ 9 عدد اول
+printFibonacci(9);
+echo "<br>";
+// 10) Palindrome Checker
+function isPalindrome($number)
+{
+    $original = $number;
+    $reversed = 0;
+    while ($number > 0) {
+        $digit = $number % 10;
+        $reversed = $reversed * 10 + $digit;
+        $number = (int) ($number / 10);
+    }
+    return $original == $reversed;
+}
+
