@@ -27,9 +27,28 @@ function isArmstrongNumber(num) {
 }
 
 // Example usage:153
-const number = 157;
+let number = 12;
 if (isArmstrongNumber(number)) {
   console.log(number + " is an Armstrong number.");
 } else {
   console.log(number + " is not an Armstrong number.");
 }
+// Hailstone Numbers:
+function hailstone(num) {
+  let steps = 0;
+  while (num !== 1) {
+    if (num % 2 === 0) {
+      num = num / 2;
+    } else {
+      num = 3 * num + 1;
+    }
+    {
+      steps++;
+    }
+  }
+  return steps;
+}
+
+// Example usage:
+const result = hailstone(number);
+console.log(`Number of steps for ${number} to reach 1: ${result}`);
