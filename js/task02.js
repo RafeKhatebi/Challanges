@@ -52,3 +52,28 @@ function hailstone(num) {
 // Example usage:
 const result = hailstone(number);
 console.log(`Number of steps for ${number} to reach 1: ${result}`);
+
+// Find GCD (Greatest Common Divisor)
+// 	Given two numbers, find their GCD using a loop.
+//Euclidean algorithm.
+function gcd(a, b) {
+  while (b !== 0) {
+    let temp = b;
+    b = a % b;
+    a = temp;
+  }
+  return a;
+}
+//Example usage:
+let num1 = 48;
+let num2 = 18;
+let resultGCD = gcd(num1, num2);
+console.log(`GCD of ${num1} and ${num2} is: ${resultGCD}`);
+
+//Lcd least common divisor
+// function lcm(a, b) {
+//   return Math.abs(a * b) / gcd(a, b);
+// }
+//Example usage:
+let resultLCM = lcm(num1, num2);
+console.log(`LCM of ${num1} and ${num2} is: ${resultLCM}`);
