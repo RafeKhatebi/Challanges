@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guessing Game</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .game {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 300px;
+      }
+      input[type="number"] {
+        padding: 8px;
+        width: 80px;
+        font-size: 16px;
+      }
+      button {
+        padding: 8px 12px;
+        margin-left: 10px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      #message {
+        margin-top: 15px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="game">
+      <h1>Guess the Number!</h1>
+      <p>I'm thinking of a number between 1 and 100</p>
+      <input type="number" id="guessInput" min="1" max="100" />
+      <button onclick="checkGuess()">Guess</button>
+      <button onclick="playAgain()">Play Again</button>
+      <p id="message"></p>
+    </div>
+
+    <script>
+      let secret;
+      let attempts;
+
+      // Function to start or reset the game
+      function initGame() {
+        secret = Math.floor(Math.random() * 100) + 1; // random number 1-100
+        attempts = 0;
+        document.getElementById("message").textContent = "";
+        document.getElementById("guessInput").value = "";
+        document.getElementById("guessInput").focus();
+      }
+
+      // Call initGame when page loads
+      initGame();
+
+      function checkGuess() {
+        const input = document.getElementById("guessInput");
+        const message = document.getElementById("message");
+        const guess = parseInt(input.value, 10); // integer only
+
+        // Validate input
+        if (isNaN(guess) || guess < 1 || guess > 100) {
+          message.textContent = "Enter a valid integer between 1 and 100.";
+          return;
+        }
+
+        attempts++;
+
+        if (guess === secret) {
+          message.textContent = `🎉 Correct! The number was ${secret}. You guessed it in ${attempts} attempts.`;
+        } else {
+          message.textContent =
+            guess < secret ? "Too low! Try again." : "Too high! Try again.";
+        }
+
+        input.value = "";
+        input.focus();
+      }
+
+      function playAgain() {
+        initGame();
+      }
+    </script>
+  </body>
+</html>
