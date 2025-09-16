@@ -77,3 +77,17 @@ function lcm(a, b) {
 //Example usage:
 let resultLCM = lcm(num1, num2);
 console.log(`LCM of ${num1} and ${num2} is: ${resultLCM}`);
+
+/* Pattern Printing - Pyramid
+Write a program that prints this pattern for N = 5:
+ / *
+ ***
+ *****
+ *******   */
+let N = 5;
+
+for (let i = 1; i <= N; i++) {
+  let spaces = " ".repeat(N - i);
+  let stars = "*".repeat(2 * i - 1);
+  console.log(spaces + stars);
+}
