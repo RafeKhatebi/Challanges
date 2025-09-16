@@ -71,9 +71,9 @@ let resultGCD = gcd(num1, num2);
 console.log(`GCD of ${num1} and ${num2} is: ${resultGCD}`);
 
 //Lcd least common divisor
-// function lcm(a, b) {
-//   return Math.abs(a * b) / gcd(a, b);
-// }
+function lcm(a, b) {
+  return Math.abs(a * b) / gcd(a, b);
+}
 //Example usage:
 let resultLCM = lcm(num1, num2);
 console.log(`LCM of ${num1} and ${num2} is: ${resultLCM}`);
