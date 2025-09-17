@@ -38,3 +38,33 @@ console.log(findSmallest(1, 2, 3));
 function toSeconds(hours, minutes) {
   return (hours * 60 + minutes) * 60;
 }
+// 6. 	Reverse a String hello to olleh
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+console.log(reverseString("hello"));
+
+// 7.	Count Vowels in a String
+// Write a function countVowels(str) that takes a string and returns the number of vowels in it.
+function countVowels(str) {
+  const vowel = "aeiouAEIOU";
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (vowel.includes(str[i])) {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(countVowels("hello"));
+// 8.	Check Even or Odd
+// Create a function isEven(number) that returns true if the number is even and false otherwise.
+function isEven(number) {
+  return number % 2 === 0;
+}
+console.log(isEven(2));
+// 9 . check odd or even
+function isOdd(number) {
+  return number % 2 !== 0;
+}
+console.log(isOdd(3));
