@@ -47,10 +47,10 @@ console.log(reverseString("hello"));
 // 7.	Count Vowels in a String
 // Write a function countVowels(str) that takes a string and returns the number of vowels in it.
 function countVowels(str) {
-  const vowels = "aeiouAEIOU";
+  const vowel = "aeiouAEIOU";
   let count = 0;
   for (let i = 0; i < str.length; i++) {
-    if (vowels.includes(str[i])) {
+    if (vowel.includes(str[i])) {
       count++;
     }
   }
