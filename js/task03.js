@@ -35,6 +35,6 @@ console.log(findSmallest(1, 2, 3));
 
 // 5.	Convert Hours and Minutes to Seconds
 // Write a function toSeconds(hours, minutes) that converts hours and minutes to seconds.
-// function toSeconds(hours, minutes) {
-//   return (hours * 60 + minutes) * 60;
-// }
+function toSeconds(hours, minutes) {
+  return (hours * 60 + minutes) * 60;
+}
