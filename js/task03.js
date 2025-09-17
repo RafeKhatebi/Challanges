@@ -28,9 +28,9 @@ console.log(findLargest(1, 2, 3));
 // 4.	Find the Smallest Number
 // Write a function findSmallest(a, b, c) that returns the smallest of the three numbers.
 // Use Math.min().
-// function findSmallest(a, b, c) {
-//   return Math.min(a, b, c);
-// }
+function findSmallest(a, b, c) {
+  return Math.min(a, b, c);
+}
 console.log(findSmallest(1, 2, 3));
 
 // 5.	Convert Hours and Minutes to Seconds
