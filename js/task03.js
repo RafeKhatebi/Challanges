@@ -20,9 +20,9 @@ console.log(fahrenheitToCelsius(212)); // Output: 100
 // 3.	Find the Largest Number
 // Write a function findLargest(a, b, c) that returns the largest of the three numbers.
 // Use Math.max().
-// function findLargest(a, b, c) {
-//   return Math.max(a, b, c);
-// }
+function findLargest(a, b, c) {
+  return Math.max(a, b, c);
+}
 console.log(findLargest(1, 2, 3));
 
 // 4.	Find the Smallest Number
