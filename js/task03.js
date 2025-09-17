@@ -38,3 +38,8 @@ console.log(findSmallest(1, 2, 3));
 function toSeconds(hours, minutes) {
   return (hours * 60 + minutes) * 60;
 }
+// 6. 	Reverse a String hello to olleh
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+console.log(reverseString("hello"));
