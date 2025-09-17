@@ -12,9 +12,9 @@ console.log(celsiusToFahrenheit(100)); // Output: 212
 // Write a function fahrenheitToCelsius(fahrenheit) that converts a temperature from Fahrenheit to Celsius using the formula:
 // C=(F−32)×59C = (F - 32) \times \frac{5}{9}C=(F−32)×5/9
 
-// function fahrenheitToCelsius(fahrenheit) {
-//   return ((fahrenheit - 32) * 5) / 9;
-// }
+function fahrenheitToCelsius(fahrenheit) {
+  return ((fahrenheit - 32) * 5) / 9;
+}
 console.log(fahrenheitToCelsius(32)); // Output: 0
 console.log(fahrenheitToCelsius(212)); // Output: 100
 // 3.	Find the Largest Number
