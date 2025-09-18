@@ -23,3 +23,14 @@ function factorial(num) {
   return num * factorial(num - 1);
 }
 console.log(factorial(43));
+console.log(factorial(5));
+
+// 8.	Find the GCD of Two Numbers
+// Write a function gcd(a, b) that finds the Greatest Common Divisor (GCD) using the Euclidean algorithm.
+function gcd(a, b) {
+  if (b === 0) {
+    return a;
+  }
+  return gcd(b, a % b);
+}
+console.log(gcd(12, 18));
