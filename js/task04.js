@@ -34,3 +34,19 @@ function gcd(a, b) {
   return gcd(b, a % b);
 }
 console.log(gcd(12, 18));
+//	Find the nth Fibonacci Number
+// Implement fibonacci(n), which returns the nth Fibonacci number
+function fibonacci(n) {
+  if (n <= 1) {
+    return n;
+  }
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+// Check if a String is a Palindrome
+// Write a function isPalindrome(str) that returns true if the given string is a palindrome.
+// Example: "racecar" → true, "hello" → false
+function isPalindrome(str) {
+  return str === str.split("").reverse().join("");
+}
+console.log(isPalindrome("racecar"));
