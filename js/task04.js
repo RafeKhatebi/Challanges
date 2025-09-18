@@ -14,3 +14,12 @@ function isPrime(num) {
   return true;
 }
 console.log(isPrime(21));
+
+//7.	Calculate Factorial Using Recursion
+function factorial(num) {
+  if (num === 0 || num === 1) {
+    return 1;
+  }
+  return num * factorial(num - 1);
+}
+console.log(factorial(43));
