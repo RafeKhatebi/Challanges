@@ -68,3 +68,9 @@ function isOdd(number) {
   return number % 2 !== 0;
 }
 console.log(isOdd(3));
+// reverse a string
+// hello to olleh
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+console.log(reverseString("hello"));
