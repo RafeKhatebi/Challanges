@@ -46,14 +46,14 @@ function binarySearch(arr, target) {
 }
 
 // 13. Convert Decimal to Binary
-// function decimalToBinary(n) {
-//     let binary = '';
-//     while (n > 0) {
-//         binary = (n % 2) + binary;
-//         n = Math.floor(n / 2);
-//     }
-//     return binary;
-// }
+function decimalToBinary(n) {
+    let binary = '';
+    while (n > 0) {
+        binary = (n % 2) + binary;
+        n = Math.floor(n / 2);
+    }
+    return binary;
+}
 
 // 14. Sorting an Array Using Bubble Sort
 // function bubbleSort(arr) {
