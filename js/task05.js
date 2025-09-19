@@ -56,29 +56,29 @@ function decimalToBinary(n) {
 }
 
 // 14. Sorting an Array Using Bubble Sort
-// function bubbleSort(arr) {
-//     let len = arr.length;
-//     for (let i = 0; i < len; i++) {
-//         for (let j = 0; j < len - i - 1; j++) {
-//             if (arr[j] > arr[j + 1]) {
-//                 let temp = arr[j];
-//                 arr[j] = arr[j + 1];
-//                 arr[j + 1] = temp;
-//             }
-//         }
-//     }
-//     return arr;
-// }
-
-// 15. Find Unique Elements in an Array
-function findUnique(arr) {
-    let unique = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (unique.indexOf(arr[i]) === -1) {
-            unique.push(arr[i]);
+function bubbleSort(arr) {
+    let len = arr.length;
+    for (let i = 0; i < len; i++) {
+        for (let j = 0; j < len - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
         }
     }
-    return unique;
+    return arr;
 }
+
+// 15. Find Unique Elements in an Array
+// function findUnique(arr) {
+//     let unique = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         if (unique.indexOf(arr[i]) === -1) {
+//             unique.push(arr[i]);
+//         }
+//     }
+//     return unique;
+// }
 
 
