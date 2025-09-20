@@ -11,15 +11,18 @@
 // 2.	Simple Calculator
 // •	Take two numbers and an operator (+, -, *, /).
 // •	Use switch to perform the correct operation and return the result.
+
 // 3.	Traffic Light System
 // •	Take a traffic light color ("red", "yellow", "green") as input.
 // •	Use switch to print the corresponding action:
 // •	"Red" → "Stop"
 // •	"Yellow" → "Slow Down"
 // •	"Green" → "Go"
+
 // 4.	Month Name and Days
 // •	Input a number (1-12) representing a month.
 // •	Use switch to print the name of the month and how many days it has.
+
 // 5.	Check for Vowel or Consonant
 // •	Take a letter as input.
 // •	Use switch to determine whether it is a vowel or a consonant.
@@ -66,3 +69,20 @@ function calculate(num1, num2, operator) {
             return "Invalid operator";
     }
 }
+console.log(calculate(5, 3, "+")); // Output: 8 
+
+// Traffic Light System
+function trafficLight(color) {
+    switch (color) {
+        case "red":
+            return "Stop";
+        case "yellow":
+            return "Slow Down";
+        case "green":
+            return "Go";
+        default:
+            return "Invalid color";
+    }
+}
+console.log(trafficLight("red")); // Output: Stop
+
