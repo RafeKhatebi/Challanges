@@ -118,3 +118,19 @@ function getMonthInfo(month) {
   }
 }
 console.log(getMonthInfo(2)); // Output: February has 28 or 29 days
+
+// Check for Vowel or Consonant
+function checkVowelOrConsonant(letter) {
+  switch (letter.toLowerCase()) {
+    case "a":
+    case "e":
+    case "i":
+    case "o":
+    case "u":
+      return "Vowel";
+    default:
+      return "Consonant";
+  }
+}
+console.log(checkVowelOrConsonant("A")); // Output: Vowel
+console.log(checkVowelOrConsonant("b")); // Output: Consonant
