@@ -132,3 +132,51 @@ switch (month) {
 }
 
 console.log(`The season is: ${season}`);
+
+// Task 10: Rock, Paper, Scissors Game
+let userChoice1 = "rock";
+let computerChoice = "scissors"; // Example computer choice
+let result;
+switch (userChoice1) {
+  case "rock":
+    switch (computerChoice) {
+      case "rock":
+        result = "It's a tie!";
+        break;
+      case "paper":
+        result = "Computer wins!";
+        break;
+      case "scissors":
+        result = "You win!";
+        break;
+    }
+    break;
+  case "paper":
+    switch (computerChoice) {
+      case "rock":
+        result = "You win!";
+        break;
+      case "paper":
+        result = "It's a tie!";
+        break;
+      case "scissors":
+        result = "Computer wins!";
+        break;
+    }
+    break;
+  case "scissors":
+    switch (computerChoice) {
+      case "rock":
+        result = "Computer wins!";
+        break;
+      case "paper":
+        result = "You win!";
+        break;
+      case "scissors":
+        result = "It's a tie!";
+        break;
+    }
+    break;
+  default:
+    result = "Invalid choice.";
+}
