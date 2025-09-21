@@ -49,3 +49,30 @@ switch (true) {
 }
 
 console.log(`The student's grade is: ${grade}`);
+
+//  Task 7: Currency Converter
+let currencyCode = "EUR"; // Example currency code
+let conversionRate;
+switch (currencyCode) {
+  case "USD":
+    conversionRate = 1; // Base currency
+    break;
+  case "EUR":
+    conversionRate = 0.85;
+    break;
+  case "INR":
+    conversionRate = 74.5;
+    break;
+  case "JPY":
+    conversionRate = 110;
+    break;
+  default:
+    console.log("Invalid currency code.");
+    conversionRate = null;
+}
+
+if (conversionRate !== null) {
+  console.log(`The conversion rate for ${currencyCode} is: ${conversionRate}`);
+}
+
+
