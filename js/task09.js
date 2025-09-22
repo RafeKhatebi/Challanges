@@ -118,3 +118,25 @@ switch (vehicleType) {
 }
 
 console.log(tollFee);
+
+//15 Music Playlist Controller
+let command = "Play";
+let action;
+
+switch (command) {
+  case "Play":
+    action = "Playing";
+    break;
+  case "Pause":
+    action = "Paused";
+    break;
+  case "Next":
+    action = "Next track";
+    break;
+  case "Previous":
+    action = "Previous track";
+    break;
+  default:
+    action = "Invalid command";
+}
+console.log(action);
