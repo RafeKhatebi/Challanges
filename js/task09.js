@@ -76,3 +76,25 @@ switch (birthMonth) {
 }
 
 console.log(zodiacSign);
+
+//13 Discount System Based on Membership
+let membershipType = "Gold";
+let purchaseAmount = 200;
+let discountRate;
+
+switch (membershipType) {
+  case "Gold":
+    discountRate = 0.2;  // 20% discount
+    break;
+  case "Silver":
+    discountRate = 0.1;  // 10% discount
+    break;
+  case "Bronze":
+    discountRate = 0.05; // 5% discount
+    break;
+  default:
+    discountRate = 0;
+}
+
+let finalPrice = purchaseAmount - (purchaseAmount * discountRate);
+console.log(finalPrice);
