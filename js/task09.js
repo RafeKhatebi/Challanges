@@ -30,49 +30,49 @@ switch (number) {
 console.log(romanNumeral);
 
 //12 Zodiac Sign Finder
-// let birthMonth = "January";
-// let birthDay = 15;
-// let zodiacSign;
+let birthMonth = "January";
+let birthDay = 15;
+let zodiacSign;
 
-// switch (birthMonth) {
-//   case "January":
-//     zodiacSign = (birthDay <= 19) ? "Capricorn" : "Aquarius";
-//     break;
-//   case "February":
-//     zodiacSign = (birthDay <= 18) ? "Aquarius" : "Pisces";
-//     break;
-//   case "March":
-//     zodiacSign = (birthDay <= 20) ? "Pisces" : "Aries";
-//     break;
-//   case "April":
-//     zodiacSign = (birthDay <= 19) ? "Aries" : "Taurus";
-//     break;
-//   case "May":
-//     zodiacSign = (birthDay <= 20) ? "Taurus" : "Gemini";
-//     break;
-//   case "June":
-//     zodiacSign = (birthDay <= 20) ? "Gemini" : "Cancer";
-//     break;
-//   case "July":
-//     zodiacSign = (birthDay <= 22) ? "Cancer" : "Leo";
-//     break;
-//   case "August":
-//     zodiacSign = (birthDay <= 22) ? "Leo" : "Virgo";
-//     break;
-//   case "September":
-//     zodiacSign = (birthDay <= 22) ? "Virgo" : "Libra";
-//     break;
-//   case "October":
-//     zodiacSign = (birthDay <= 22) ? "Libra" : "Scorpio";
-//     break;
-//   case "November":
-//     zodiacSign = (birthDay <= 21) ? "Scorpio" : "Sagittarius";
-//     break;
-//   case "December":
-//     zodiacSign = (birthDay <= 21) ? "Sagittarius" : "Capricorn";
-//     break;
-//   default:
-//     zodiacSign = "Invalid";
-// }
+switch (birthMonth) {
+  case "January":
+    zodiacSign = (birthDay <= 19) ? "Capricorn" : "Aquarius";
+    break;
+  case "February":
+    zodiacSign = (birthDay <= 18) ? "Aquarius" : "Pisces";
+    break;
+  case "March":
+    zodiacSign = (birthDay <= 20) ? "Pisces" : "Aries";
+    break;
+  case "April":
+    zodiacSign = (birthDay <= 19) ? "Aries" : "Taurus";
+    break;
+  case "May":
+    zodiacSign = (birthDay <= 20) ? "Taurus" : "Gemini";
+    break;
+  case "June":
+    zodiacSign = (birthDay <= 20) ? "Gemini" : "Cancer";
+    break;
+  case "July":
+    zodiacSign = (birthDay <= 22) ? "Cancer" : "Leo";
+    break;
+  case "August":
+    zodiacSign = (birthDay <= 22) ? "Leo" : "Virgo";
+    break;
+  case "September":
+    zodiacSign = (birthDay <= 22) ? "Virgo" : "Libra";
+    break;
+  case "October":
+    zodiacSign = (birthDay <= 22) ? "Libra" : "Scorpio";
+    break;
+  case "November":
+    zodiacSign = (birthDay <= 21) ? "Scorpio" : "Sagittarius";
+    break;
+  case "December":
+    zodiacSign = (birthDay <= 21) ? "Sagittarius" : "Capricorn";
+    break;
+  default:
+    zodiacSign = "Invalid";
+}
 
-// console.log(zodiacSign);
+console.log(zodiacSign);
