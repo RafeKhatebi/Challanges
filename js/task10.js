@@ -25,9 +25,9 @@ for (let i = 1; i <= 100; i++) {
       }
     }
   }
-//   if (isPrime) {
-//     console.log(i);
-//   }
+  if (isPrime) {
+    console.log(i);
+  }
 }
 /*
 2. sudo code: use a loop to iterate through the number of rows and inside that use another loop to print the spaces and numbers
