@@ -41,5 +41,9 @@ console.log(acc.getBalance()); // 150
 // console.log(acc.#balance); // ❌ Error: Private field '#balance' must be declared in an enclosing class
 
 //3. How do JavaScript classes differ from traditional classes in languages like Java or C++?
-
-/* JavaScript classes are syntactical sugar over the existing prototype-based inheritance and do not introduce a new object-oriented inheritance model. In contrast, languages like Java and C++ use class-based inheritance, where classes are blueprints for creating objects. Additionally, JavaScript supports dynamic typing and allows for more flexible object structures. */
+/* JavaScript classes are syntactical sugar over its existing prototype-based inheritance. They do not have traditional class-based inheritance like Java or C++. 
+JavaScript classes support dynamic typing, while Java and C++ are statically typed. 
+JavaScript classes can be modified at runtime, whereas traditional classes are more rigid.
+JavaScript classes do not support access modifiers like public, private, and protected in the same way as Java or C++.
+JavaScript classes support first-class functions, allowing functions to be passed as arguments, returned from other functions, and assigned to variables. 
+JavaScript classes are not hoisted, meaning they cannot be used before they are declared. In contrast, function declarations in JavaScript are hoisted.*/
