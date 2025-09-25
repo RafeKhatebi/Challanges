@@ -104,3 +104,86 @@ console.log(person.name);
 console.log(person.getSSN()); // 123-45-6789
 // console.log(person.#ssn); // ❌ Error: Private field '#ssn' must be declared in an enclosing class
 // you can not access the private property directly from outside the class
+
+//7. What is method overriding, and how can it be implemented in JavaScript?
+class Parent {
+  greet() {
+    console.log("Hello from Parent");
+  }
+}
+
+class Child extends Parent {
+  greet() {
+    console.log("Hello from Child");
+  }
+}
+const child = new Child();
+child.greet(); // Hello from Child
+// In this example, the Child class overrides the greet method of the Parent class. When greet is called on an instance of Child, the Child's version is executed.
+
+//8. Write an example demonstrating polymorphism in JavaScript.
+class Shape {
+  area() {
+    return 0;
+  }
+}
+class Circle extends Shape {
+  constructor(radius) {
+    super();
+    this.radius = radius;
+  }
+  area() {
+    return Math.PI * this.radius ** 2;
+  }
+}
+
+// Rectangle class
+class Rectangle extends Shape {
+  constructor(width, height) {
+    super();
+    this.width = width;
+    this.height = height;
+  }
+  area() {
+    return this.width * this.height;
+  }
+}
+const shapes = [new Circle(5), new Rectangle(4, 6)];
+shapes.forEach((shape) => {
+  console.log(`Area: ${shape.area()}`);
+}); // Area: 78.53981633974483
+
+// 9. What is the purpose of super() in JavaScript classes?
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+}
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
+}
+const dog2 = new Dog("Rex", "German Shepherd");
+console.log(dog2.name); // Rex
+console.log(dog2.breed); // German Shepherd
+// The super() function is used to call the constructor of the parent class. It must be called before accessing 'this' in the child class constructor. This allows the child class to inherit properties and methods from the parent class.
+//10. Explain the difference between composition and inheritance.
+/* Inheritance is a mechanism where a new class (child) inherits properties and methods from an existing class (parent). It establishes an "is-a" relationship. For example, a Dog is an Animal.
+Composition, on the other hand, is a design principle where a class is composed of one or more objects from other classes. It establishes a "has-a" relationship. For example, a Car has an Engine.
+Inheritance can lead to a rigid class hierarchy and tight coupling between classes, while composition offers more flexibility and promotes code reuse by combining simple objects to create complex functionality.
+In summary, inheritance is about creating a new class based on an existing class, while composition is about building complex objects by combining simpler ones. */
+class Engine {
+  start() {
+    console.log("Engine started");
+  }
+}
+class Car2 {
+  constructor() {
+    this.engine = new Engine(); // Composition
+  }
+}
+const myCar2 = new Car2();
+myCar2.engine.start(); // Engine started
+// Car2 has an Engine (composition), but Car2 is not an Engine (inheritance).
