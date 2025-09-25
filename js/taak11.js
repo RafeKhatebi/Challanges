@@ -49,3 +49,15 @@ JavaScript classes support first-class functions, allowing functions to be passe
 JavaScript classes are not hoisted, meaning they cannot be used before they are declared. In contrast, function declarations in JavaScript are hoisted.*/
 
 //4. Write a class Car with properties brand, model, and a method displayInfo().
+class Car {
+  constructor(brand, model) {
+    this.brand = brand;
+    this.model = model;
+  }
+  displayInfo() {
+    console.log(`Car Brand: ${this.brand}, Model: ${this.model}`);
+  }
+}
+
+const myCar = new Car("Toyota", "Corolla");
+myCar.displayInfo(); // Car Brand: Toyota, Model: Corolla
