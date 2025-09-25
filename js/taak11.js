@@ -104,3 +104,21 @@ console.log(person.name);
 console.log(person.getSSN()); // 123-45-6789
 // console.log(person.#ssn); // ❌ Error: Private field '#ssn' must be declared in an enclosing class
 // you can not access the private property directly from outside the class
+
+//7. What is method overriding, and how can it be implemented in JavaScript?
+class Parent {
+  greet() {
+    console.log("Hello from Parent");
+  }
+}
+
+class Child extends Parent {
+  greet() {
+    console.log("Hello from Child");
+  }
+}
+const child = new Child();
+child.greet(); // Hello from Child
+// In this example, the Child class overrides the greet method of the Parent class. When greet is called on an instance of Child, the Child's version is executed.
+
+//
