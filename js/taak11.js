@@ -137,3 +137,53 @@ class Circle extends Shape {
   }
 }
 
+// Rectangle class
+class Rectangle extends Shape {
+  constructor(width, height) {
+    super();
+    this.width = width;
+    this.height = height;
+  }
+  area() {
+    return this.width * this.height;
+  }
+}
+const shapes = [new Circle(5), new Rectangle(4, 6)];
+shapes.forEach((shape) => {
+  console.log(`Area: ${shape.area()}`);
+}); // Area: 78.53981633974483
+
+// 9. What is the purpose of super() in JavaScript classes?
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+}
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
+}
+const dog2 = new Dog("Rex", "German Shepherd");
+console.log(dog2.name); // Rex
+console.log(dog2.breed); // German Shepherd
+// The super() function is used to call the constructor of the parent class. It must be called before accessing 'this' in the child class constructor. This allows the child class to inherit properties and methods from the parent class.
+//10. Explain the difference between composition and inheritance.
+/* Inheritance is a mechanism where a new class (child) inherits properties and methods from an existing class (parent). It establishes an "is-a" relationship. For example, a Dog is an Animal.
+Composition, on the other hand, is a design principle where a class is composed of one or more objects from other classes. It establishes a "has-a" relationship. For example, a Car has an Engine.
+Inheritance can lead to a rigid class hierarchy and tight coupling between classes, while composition offers more flexibility and promotes code reuse by combining simple objects to create complex functionality.
+In summary, inheritance is about creating a new class based on an existing class, while composition is about building complex objects by combining simpler ones. */
+class Engine {
+  start() {
+    console.log("Engine started");
+  }
+}
+class Car2 {
+  constructor() {
+    this.engine = new Engine(); // Composition
+  }
+}
+const myCar2 = new Car2();
+myCar2.engine.start(); // Engine started
+// Car2 has an Engine (composition), but Car2 is not an Engine (inheritance).
