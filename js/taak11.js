@@ -47,3 +47,5 @@ JavaScript classes can be modified at runtime, whereas traditional classes are m
 JavaScript classes do not support access modifiers like public, private, and protected in the same way as Java or C++.
 JavaScript classes support first-class functions, allowing functions to be passed as arguments, returned from other functions, and assigned to variables. 
 JavaScript classes are not hoisted, meaning they cannot be used before they are declared. In contrast, function declarations in JavaScript are hoisted.*/
+
+//4. Write a class Car with properties brand, model, and a method displayInfo().
