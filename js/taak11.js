@@ -121,4 +121,19 @@ const child = new Child();
 child.greet(); // Hello from Child
 // In this example, the Child class overrides the greet method of the Parent class. When greet is called on an instance of Child, the Child's version is executed.
 
-//
+//8. Write an example demonstrating polymorphism in JavaScript.
+class Shape {
+  area() {
+    return 0;
+  }
+}
+class Circle extends Shape {
+  constructor(radius) {
+    super();
+    this.radius = radius;
+  }
+  area() {
+    return Math.PI * this.radius ** 2;
+  }
+}
+
