@@ -86,3 +86,21 @@ This allows for shared behavior among objects without duplicating code. You can 
 Prototype-based inheritance is dynamic, meaning that changes to the prototype are reflected in all objects that inherit from it.*/
 
 //6. How do you create a private property in a JavaScript class?
+class Person {
+  #ssn; // private field
+
+  constructor(name, ssn) {
+    this.name = name;
+    this.#ssn = ssn; // private property
+  }
+  //you should define a way to access the private property
+  getSSN() {
+    return this.#ssn; // controlled access
+  }
+}
+
+const person = new Person("Alice", "123-45-6789");
+console.log(person.name);
+console.log(person.getSSN()); // 123-45-6789
+// console.log(person.#ssn); // ❌ Error: Private field '#ssn' must be declared in an enclosing class
+// you can not access the private property directly from outside the class
