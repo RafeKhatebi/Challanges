@@ -11,3 +11,10 @@ function findLargestElement(arr) {
   if (arr.length === 0) return null; // Handle empty array
   return Math.max(...arr);
 }
+
+// 2. Function to find the sum of all elements in an array
+function sumOfElements(arr) {
+  //reduce method to sum all elements in the array
+  if (arr.length === 0) return 0;
+  return arr.reduce((sum, num) => sum + num, 0);
+}
