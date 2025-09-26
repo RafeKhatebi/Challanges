@@ -24,5 +24,8 @@ function containsElement(arr, element) {
   return arr.includes(element);
 }
 
-
+// 4. Function to count the occurrences of a specific element in an array
+function countOccurrences(arr, element) {
+  return arr.filter((item) => item === element).length;
+}
 
