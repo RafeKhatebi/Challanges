@@ -18,3 +18,11 @@ function sumOfElements(arr) {
   if (arr.length === 0) return 0;
   return arr.reduce((sum, num) => sum + num, 0);
 }
+
+// 3. Check if an array contains a specific element
+function containsElement(arr, element) {
+  return arr.includes(element);
+}
+
+
+
