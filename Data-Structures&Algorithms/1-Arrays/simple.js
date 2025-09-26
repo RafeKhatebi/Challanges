@@ -29,3 +29,14 @@ function countOccurrences(arr, element) {
   return arr.filter((item) => item === element).length;
 }
 
+// 5. Function to find the smallest number in an array
+function findSmallestElement(arr) {
+  if (arr.length === 0) return null;
+  return Math.min(...arr);
+}
+// Example usage:
+console.log("Largest Element:", findLargestElement(arr));
+console.log("Sum of Elements:", sumOfElements(arr));
+console.log("Contains 5:", containsElement(arr, 5));
+console.log("Occurrences of 2:", countOccurrences(arr, 2));
+console.log("Smallest Element:", findSmallestElement(arr));
