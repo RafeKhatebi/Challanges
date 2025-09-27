@@ -14,6 +14,7 @@ function reverseArray(arr) {
   return result;
 }
 
+
 // Merge two sorted arrays
 function mergeSortedArrays(arr1, arr2) {
   const merged = [];
@@ -79,3 +80,13 @@ console.log("Reversed Array:", reverseArray(arr));
 console.log("Merged Sorted Arrays:", mergeSortedArrays([1, 3, 5], [2, 4, 6]));
 console.log("Rotated Array:", rotateArray(arr, 2));
 console.log("Second Largest Element:", findSecondLargest([3, 5, 7, 2, 8]));
+
+
+// Example usage:
+let arrA = [1, 2, 3, 4];
+let arrB = [3, 4, 5, 6];
+console.log("Intersection of Arrays:", intersection(arrA, arrB));
+console.log("Second Largest Element:", findSecondLargest([3, 5, 7, 2, 8]));
+console.log("Intersection of Arrays:", intersection(arrA, arrB));
+console.log("Second Largest Element:", findSecondLargest([3, 5, 7, 2, 8]));
+console.log("Intersection of Arrays:", intersection(arrA, arrB));
