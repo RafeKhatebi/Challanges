@@ -35,3 +35,15 @@ function findMissingNumber(arr, N) {
   return expectedSum - actualSum;
 }
 
+// 13  How do you check if two arrays are equal?
+let arr1 = [1, 2, 3, 4, 3, 2, 4];
+let arr2 = [3, 3, 2, 3, 1, 4, 5];
+function arraysEqual(arr1, arr2) {
+  if (arr1.length !== arr2.length) return false;
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) return false;
+  }
+  return true;
+}
+console.log(arraysEqual(arr1, arr2));
+
