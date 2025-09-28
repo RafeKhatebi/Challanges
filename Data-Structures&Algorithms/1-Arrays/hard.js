@@ -24,4 +24,14 @@ function removeDuplicates(arr) {
   return uniqueArr;
 }
 console.log("Array after removing duplicates:", removeDuplicates(arr));
+// 12. Function to find the missing number in an array of 1 to N
+// Define a function with two parameters
+function findMissingNumber(arr, N) {
+  // Calculate the expected sum of numbers from 1 to N
+  let expectedSum = (N * (N + 1)) / 2;
+  // Calculate the actual sum of the array elements
+  let actualSum = arr.reduce((acc, num) => acc + num, 0);
+  // The missing number is the difference between expected and actual sum
+  return expectedSum - actualSum;
+}
 
