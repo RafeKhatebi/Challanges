@@ -46,4 +46,3 @@ function arraysEqual(arr1, arr2) {
   return true;
 }
 console.log(arraysEqual(arr1, arr2));
-
