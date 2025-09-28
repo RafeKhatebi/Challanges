@@ -16,6 +16,7 @@ function removeDuplicates(arr) {
   //Loop through the array
   for (let i = 0; i < arr.length; i++) {
     //If the element is not in the unique array, add it
+    if (!uniqueArr.includes(arr[i])) {
       uniqueArr.push(arr[i]);
     }
   }
@@ -23,3 +24,4 @@ function removeDuplicates(arr) {
   return uniqueArr;
 }
 console.log("Array after removing duplicates:", removeDuplicates(arr));
+
