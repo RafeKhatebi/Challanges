@@ -12,5 +12,17 @@ function isPalindrome(str) {
   const reversedStr = cleanedStr.split("").reverse().join("");
   return cleanedStr === reversedStr;
 }
+
 console.log(isPalindrome("A man, a plan, a canal: Panama")); // true
 console.log(isPalindrome("hello")); // false
+
+// 2. Count the number of vowels in a string
+function countVowels(str) {
+  const matches = str.match(/[aeiou]/gi);
+  return matches ? matches.length : 0;
+}
+
+console.log(countVowels("Hello World")); // 3
+console.log(countVowels("xyz")); // 0
+
+// 3. Reverse a string
