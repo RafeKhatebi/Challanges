@@ -43,3 +43,5 @@ console.log(removeSpaces("  JavaScript  ")); // "JavaScript"
 function capitalizeFirstLetters(str) {
   return str.replace(/\b\w/g, char => char.toUpperCase());
 }
+console.log(capitalizeFirstLetters("hello world")); // "Hello World"
+console.log(capitalizeFirstLetters("javaScript is fun")); // "JavaScript Is Fun"
