@@ -38,3 +38,8 @@ function removeSpaces(str) {
 }
 console.log(removeSpaces("Hello World")); // "HelloWorld"
 console.log(removeSpaces("  JavaScript  ")); // "JavaScript"
+
+// 5. Capitalize the first letter of each word in a string
+function capitalizeFirstLetters(str) {
+  return str.replace(/\b\w/g, char => char.toUpperCase());
+}
