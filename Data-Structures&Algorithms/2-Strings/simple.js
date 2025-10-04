@@ -6,7 +6,7 @@
 5.	Write a function to capitalize the first letter of each word in a string. */
 
 // 1. Check if a string is a palindrome
-// A palindrome reads the same forwards and backwards. Ignore case and non-alphanumeric characters.  
+// A palindrome reads the same forwards and backwards. Ignore case and non-alphanumeric characters.
 function isPalindrome(str) {
   const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
   const reversedStr = cleanedStr.split("").reverse().join("");
@@ -26,3 +26,6 @@ console.log(countVowels("Hello World")); // 3
 console.log(countVowels("xyz")); // 0
 
 // 3. Reverse a string
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
