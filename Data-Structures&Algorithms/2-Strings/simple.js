@@ -31,3 +31,8 @@ function reverseString(str) {
 }
 console.log(reverseString("hello")); // "olleh"
 console.log(reverseString("JavaScript")); // "tpircSavaJ"
+
+// 4. Remove spaces from a given string
+function removeSpaces(str) {
+  return str.replace(/\s+/g, "");
+}
