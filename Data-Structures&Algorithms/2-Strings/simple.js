@@ -36,3 +36,5 @@ console.log(reverseString("JavaScript")); // "tpircSavaJ"
 function removeSpaces(str) {
   return str.replace(/\s+/g, "");
 }
+console.log(removeSpaces("Hello World")); // "HelloWorld"
+console.log(removeSpaces("  JavaScript  ")); // "JavaScript"
