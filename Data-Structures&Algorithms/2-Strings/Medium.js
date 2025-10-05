@@ -93,3 +93,17 @@ function isRotation(str1, str2) {
 }
 console.log(isRotation("waterbottle", "erbottlewat")); // true
 console.log(isRotation("hello", "world")); // false
+
+// 10. Check if a string contains only unique characters
+// Algorithm:
+// 1. Define the function
+function hasUniqueChars(str) {
+  // 2. Create a new Set from the string
+  const uniqueChars = new Set(str);
+  // 3. Check if the size of the Set is equal to the length of the string
+  return uniqueChars.size === str.length;
+}
+console.log(hasUniqueChars("abcdef")); // true
+console.log(hasUniqueChars("hello")); // false
+console.log(hasUniqueChars("12345")); // true
+console.log(hasUniqueChars("112233")); // false
