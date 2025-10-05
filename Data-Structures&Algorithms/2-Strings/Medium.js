@@ -103,5 +103,6 @@ function hasUniqueChars(str) {
   // 3. Check if the size of the Set is equal to the length of the string
   return uniqueChars.size === str.length;
 }
+// Examples
 console.log(hasUniqueChars("abcdef")); // true
 console.log(hasUniqueChars("hello")); // false
