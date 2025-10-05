@@ -76,3 +76,20 @@ function compressString(str) {
 }
 console.log(compressString("aabcccccaaa")); // "a2b1c5a3"
 console.log(compressString("abcd")); // "abcd"
+
+// 9. Check if one string is a rotation of another string
+// Algorithm:
+// 1. Define the function
+function isRotation(str1, str2) {
+  // 2. Check if the lengths of the strings are equal
+  if (str1.length !== str2.length) {
+    // 3. If not, return false
+    return false;
+  }
+  // 4. Concatenate str1 with itself
+  const concatenated = str1 + str1;
+  // 5. Check if str2 is a substring of the concatenated string
+  return concatenated.includes(str2);
+}
+console.log(isRotation("waterbottle", "erbottlewat")); // true
+console.log(isRotation("hello", "world")); // false
