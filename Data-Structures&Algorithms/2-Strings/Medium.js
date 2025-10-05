@@ -49,3 +49,30 @@ function areAnagrams(str1, str2) {
 }
 console.log(areAnagrams("listen", "silent")); // true
 console.log(areAnagrams("hello", "world")); // false
+
+// 8. Compress a string using character counts
+// Algorithm:
+// 1. Define the function
+function compressString(str) {
+  // 2. Initialize an empty result string and a count variable
+  let result = "";
+  let count = 1;
+  // 3. Loop through the string, comparing each character to the next one
+  for (let i = 0; i < str.length; i++) {
+    // 4. If the current character is the same as the next one, increment the count
+    if (str[i] === str[i + 1]) {
+      count++;
+    }
+    // 5. If the current character is different from the next one, append the character and its count to the result string, then reset the count
+    else {
+      result += str[i] + count;
+      count = 1;
+    }
+  }
+  // 6. Append the last character and its count to the result string
+  result += str[str.length - 1] + count;
+  // 7. Return the compressed string if it's shorter than the original, otherwise return the original string
+  return result.length < str.length ? result : str;
+}
+console.log(compressString("aabcccccaaa")); // "a2b1c5a3"
+console.log(compressString("abcd")); // "abcd"
