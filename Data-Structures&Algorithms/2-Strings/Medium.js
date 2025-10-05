@@ -29,3 +29,23 @@ function firstNonRepeatingChar(str) {
 }
 console.log(firstNonRepeatingChar("swiss")); // "w"
 console.log(firstNonRepeatingChar("repeater")); // "r"
+
+// 7. Check if two strings are anagrams
+// anagram: a word or phrase formed by rearranging the letters of a different word or phrase
+// Anagrams are words or phrases made by rearranging the letters of another
+// Algorithm:
+// 1. Define the function with two parameters
+function areAnagrams(str1, str2) {
+  // 2. Normalize both strings by removing non-alphanumeric characters, converting to lowercase, sorting the characters, and joining them back into a string
+  const normalize = (str) =>
+    str
+      .replace(/[\W_]+/g, "")
+      .toLowerCase()
+      .split("")
+      .sort()
+      .join("");
+  // 3. Compare the normalized strings and return true if they are equal, otherwise false
+  return normalize(str1) === normalize(str2);
+}
+console.log(areAnagrams("listen", "silent")); // true
+console.log(areAnagrams("hello", "world")); // false
