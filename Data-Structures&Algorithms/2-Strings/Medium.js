@@ -105,5 +105,3 @@ function hasUniqueChars(str) {
 }
 console.log(hasUniqueChars("abcdef")); // true
 console.log(hasUniqueChars("hello")); // false
-console.log(hasUniqueChars("12345")); // true
-console.log(hasUniqueChars("112233")); // false
