@@ -102,3 +102,15 @@ function followsPattern(str, pattern) {
 // Examples
 console.log(followsPattern("redbluebluered", "abba")); // true
 console.log(followsPattern("xyzx", "abba")); // false
+
+// 15. Convert a sentence into its abbreviation
+function abbreviateSentence(sentence) {
+  const words = sentence.split(" ");
+  const abbreviations = words.map((word) => word[0].toUpperCase());
+  return abbreviations.join("");
+}
+// Example usage:
+console.log(abbreviateSentence("I am learning JavaScript"));
+// "IALJ"
+console.log(abbreviateSentence("As Soon As Possible"));
+// "ASAP"
