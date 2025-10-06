@@ -75,3 +75,42 @@ function countCharacters(str) {
 }
 // Example usage:
 console.log(countCharacters("hello world")); // { h: 1, e: 1, l: 3, o: 2, ' ': 1, w: 1, r: 1, d: 1 }
+
+// 14. Check if a string follows a given pattern
+function followsPattern(str, pattern) {
+  if (str.length !== pattern.length) return false;
+
+  const map = {}; // pattern char -> string char
+  const used = {}; // string char already mapped
+
+  for (let i = 0; i < pattern.length; i++) {
+    const pChar = pattern[i];
+    const sChar = str[i];
+
+    if (map[pChar]) {
+      if (map[pChar] !== sChar) return false;
+    } else {
+      if (used[sChar]) return false;
+      map[pChar] = sChar;
+      used[sChar] = true;
+    }
+  }
+
+  return true;
+}
+
+// Examples
+console.log(followsPattern("redbluebluered", "abba")); // true
+console.log(followsPattern("xyzx", "abba")); // false
+
+// 15. Convert a sentence into its abbreviation
+function abbreviateSentence(sentence) {
+  const words = sentence.split(" ");
+  const abbreviations = words.map((word) => word[0].toUpperCase());
+  return abbreviations.join("");
+}
+// Example usage:
+console.log(abbreviateSentence("I am learning JavaScript"));
+// "IALJ"
+console.log(abbreviateSentence("As Soon As Possible"));
+// "ASAP"
