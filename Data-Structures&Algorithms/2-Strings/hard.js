@@ -7,7 +7,8 @@
 
 // 11. Find the longest palindrome substring in a string
 function longestPalindromeSubstring(str) {
-  let start = 0, end = 0;
+  let start = 0,
+    end = 0;
 
   // Helper function to expand around the center
   function expandAroundCenter(left, right) {
@@ -20,7 +21,7 @@ function longestPalindromeSubstring(str) {
 
   // Loop through each character
   for (let i = 0; i < str.length; i++) {
-    const len1 = expandAroundCenter(i, i);     // Odd-length palindrome
+    const len1 = expandAroundCenter(i, i); // Odd-length palindrome
     const len2 = expandAroundCenter(i, i + 1); // Even-length palindrome
     const len = Math.max(len1, len2);
 
@@ -35,5 +36,27 @@ function longestPalindromeSubstring(str) {
 
 // Example usage:
 console.log(longestPalindromeSubstring("babad")); // "bab" or "aba"
-console.log(longestPalindromeSubstring("cbbd"));  // "bb"
+console.log(longestPalindromeSubstring("cbbd")); // "bb"
 
+// 12. Find all permutations of a given string
+function getPermutations(str) {
+  if (str.length === 0) return [""];
+
+  let result = [];
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+    const remaining = str.slice(0, i) + str.slice(i + 1);
+    const perms = getPermutations(remaining);
+    for (let perm of perms) {
+      result.push(char + perm);
+    }
+  }
+  return result;
+}
+
+// Example usage:
+const str = "hjk";
+const permutations = getPermutations(str);
+
+console.log(permutations);
+console.log("Total permutations:", permutations.length);
