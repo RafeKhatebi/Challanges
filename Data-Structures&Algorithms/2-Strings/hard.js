@@ -61,3 +61,17 @@ const permutations = getPermutations(str);
 console.log(permutations);
 console.log("Total permutations:", permutations.length);
 console.log("Expected permutations:", 3 * 2 * 1); // 3! = 6
+
+// 13. Count the number of occurrences of each character in a string
+function countCharacters(str) {
+  const charCount = {};
+
+  for (let char of str) {
+    // Increment the count for each character
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
+
+  return charCount;
+}
+// Example usage:
+console.log(countCharacters("hello world")); // { h: 1, e: 1, l: 3, o: 2, ' ': 1, w: 1, r: 1, d: 1 }
