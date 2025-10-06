@@ -102,6 +102,8 @@ function followsPattern(str, pattern) {
 // Examples
 console.log(followsPattern("redbluebluered", "abba")); // true
 console.log(followsPattern("xyzx", "abba")); // false
+console.log(followsPattern("dogcatcatdog", "abba")); // true
+
 
 // 15. Convert a sentence into its abbreviation
 function abbreviateSentence(sentence) {
