@@ -60,3 +60,4 @@ const permutations = getPermutations(str);
 
 console.log(permutations);
 console.log("Total permutations:", permutations.length);
+console.log("Expected permutations:", 3 * 2 * 1); // 3! = 6
