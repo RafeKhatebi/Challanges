@@ -29,3 +29,18 @@ class LinkedList {
   }
 }
 // 3. How do you delete a node from a linked list?
+LinkedList.prototype.deleteNode = function (value) {
+  if (!this.head) return;
+  if (this.head.value === value) {
+    this.head = this.head.next;
+    return;
+  }
+  let current = this.head;
+  while (current.next) {
+    if (current.next.value === value) {
+      current.next = current.next.next;
+      return;
+    }
+    current = current.next;
+  }
+};
