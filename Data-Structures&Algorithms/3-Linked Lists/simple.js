@@ -53,3 +53,14 @@ LinkedList.prototype.traverse = function () {
     current = current.next;
   }
 };
+
+// 5. Implement a function to find the length of a linked list.
+LinkedList.prototype.length = function () {
+  let count = 0;
+  let current = this.head;
+  while (current) {
+    count++;
+    current = current.next;
+  }
+  return count;
+};
