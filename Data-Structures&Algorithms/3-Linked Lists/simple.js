@@ -44,3 +44,12 @@ LinkedList.prototype.deleteNode = function (value) {
     current = current.next;
   }
 };
+
+// 4. Write a function to traverse and print a linked list.
+LinkedList.prototype.traverse = function () {
+  let current = this.head;
+  while (current) {
+    console.log(current.value);
+    current = current.next;
+  }
+};
