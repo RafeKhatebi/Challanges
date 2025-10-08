@@ -39,3 +39,43 @@ head.next.next.next.next = new ListNode(5);
 
 const middle = findMiddle(head);
 console.log(middle.value); // Output: 3
+
+// 7. Reverse a linked list
+class ListNode {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+function reverseLinkedList(head) {
+  let prev = null;
+  let current = head;
+  let next = null;
+
+  while (current !== null) {
+    next = current.next; // Save next node
+    current.next = prev; // Reverse the link
+    prev = current; // Move prev forward
+    current = next; // Move current forward
+  }
+
+  return prev; // New head of reversed list
+}
+
+// Example usage:
+const head = new ListNode(1);
+head.next = new ListNode(2);
+head.next.next = new ListNode(3);
+head.next.next.next = new ListNode(4);
+
+const reversed = reverseLinkedList(head);
+
+// Print reversed list: 4 → 3 → 2 → 1
+let node = reversed;
+let result = "";
+while (node) {
+  result += node.value + (node.next ? " → " : "");
+  node = node.next;
+}
+console.log(result);
