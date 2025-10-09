@@ -95,3 +95,24 @@ function hasCycle(head) {
   }
   return false;
 }
+
+//9. Write a function to merge two sorted linked lists.
+function mergeSortedLists(list1, list2) {
+  //
+  let dummy = { val: -1, next: null };
+  let current = dummy;
+
+  while (list1 !== null && list2 !== null) {
+    if (list1.val < list2.val) {
+      current.next = list1;
+      list1 = list1.next;
+    } else {
+      current.next = list2;
+      list2 = list2.next;
+    }
+    current = current.next;
+  }
+  // Attach the remainder of either list
+  current.next = list1 !== null ? list1 : list2;
+  return dummy.next;
+}
