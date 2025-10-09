@@ -81,7 +81,7 @@ while (node) {
 console.log(result);
 
 //8. Detect a cycle in a linked list
-//Algorithm: Floyd’s Cycle-Finding Algorithm (Tortoise and Hare Algorithm) خرگوش ولاک پشت 
+//Algorithm: Floyd’s Cycle-Finding Algorithm (Tortoise and Hare Algorithm) خرگوش ولاک پشت
 function hasCycle(head) {
   let slow = head;
   let fast = head;
