@@ -116,3 +116,33 @@ function mergeSortedLists(list1, list2) {
   current.next = list1 !== null ? list1 : list2;
   return dummy.next;
 }
+
+//10. How do you find the nth node from the end of a linked list?
+function findNthFromEnd(head, n) {
+  let mainPtr = head;
+  let refPtr = head;
+  let count = 0;
+  if (head !== null) {
+    while (count < n) {
+      if (refPtr === null) {
+        console.log(`${n} is greater than the number of nodes in the list`);
+        return;
+      }
+      refPtr = refPtr.next;
+      count++;
+    }
+    while (refPtr !== null) {
+      mainPtr = mainPtr.next;
+      refPtr = refPtr.next;
+    }
+    return mainPtr;
+  }
+  return null;
+}
+
+// Example usage:
+const head = new ListNode(1);
+head.next = new ListNode(2);
+head.next.next = new ListNode(3);
+head.next.next.next = new ListNode(4);
+head.next.next.next.next = new ListNode(5);
