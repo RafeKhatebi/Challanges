@@ -27,3 +27,41 @@ function removeDuplicates(head) {
   }
   return head;
 }
+
+//12. How do you check if two linked lists intersect?
+// Algorithm:
+// 1. Get the lengths of both linked lists.
+// 2. Calculate the difference in lengths.
+// 3. Move the pointer of the longer list ahead by the difference in lengths.
+// 4. Traverse both lists simultaneously until the pointers meet or reach the end.
+function getLength(head) {
+  let length = 0;
+  let current = head;
+  while (current) {
+    length++;
+    current = current.next;
+  }
+  return length;
+}
+
+function doIntersect(headA, headB) {
+  const lenA = getLength(headA);
+  const lenB = getLength(headB);
+  let currentA = headA;
+  let currentB = headB;
+  if (lenA > lenB) {
+    for (let i = 0; i < lenA - lenB; i++) {
+      currentA = currentA.next;
+    }
+  } else {
+    for (let i = 0; i < lenB - lenA; i++) {
+      currentB = currentB.next;
+    }
+  }
+  while (currentA && currentB) {
+    if (currentA === currentB) return true; // Intersection found
+    currentA = currentA.next;
+    currentB = currentB.next;
+  }
+  return false; // No intersection found
+}
