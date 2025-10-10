@@ -65,3 +65,31 @@ function doIntersect(headA, headB) {
   }
   return false; // No intersection found
 }
+
+//13. Write a function to find the starting point of a cycle in a linked list.
+// Algorithm:
+// 1. Use Floyd's cycle-finding algorithm (tortoise and hare).
+// 2. Initialize two pointers, slow and fast, both pointing to the head.
+// 3. Move slow one step at a time, and fast two steps at a time.
+// 4. If there is a cycle, they will eventually meet.
+// 5. Reset slow to the head, and move both pointers one step at a time until they meet again.
+// 6. The meeting point is the start of the cycle.
+function findCycleStart(head) {
+  let slow = head;
+  let fast = head;
+  while (fast && fast.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+    if (slow === fast) {
+      slow = head;
+      while (slow !== fast) {
+        slow = slow.next;
+        fast = fast.next;
+      }
+      return slow; // Start of the cycle
+    }
+  }
+  return null; // No cycle found
+}
+
+//14.
