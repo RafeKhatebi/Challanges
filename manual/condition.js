@@ -92,3 +92,14 @@ if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
 } else {
   console.log(year + " is not a leap year.");
 }
+
+// 5.	Triangle Validity
+//Algorithm to check triangle validity
+let sideA = 5;
+let sideB = 7;
+let sideC = 10;
+if (sideA + sideB > sideC && sideA + sideC > sideB && sideB + sideC > sideA) {
+  console.log("Triangle is valid.");
+} else {
+  console.log("Triangle is not valid.");
+}
