@@ -146,3 +146,5 @@ stack2.print(); // Output: 30 -> 20 -> 10 -> null
 console.log(stack2.pop()); // Output: 30
 console.log(stack2.peek()); // Output: 20
 stack2.print(); // Output: 20 -> 10 -> null
+
+//
