@@ -28,6 +28,11 @@ if (num % 2 == 0) {
 
 // 3.	Explain the difference between == and === in JavaScript.
 // == is jus for equality the amount and this for === datatype and equality of amount.
+// For example:
+let a = 5;
+let b = "5";
+console.log(a == b); // true, because values are equal
+console.log(a === b); // false, because types are different
 
 // 4.	Write a program that takes user input and prints whether it is a positive, negative, or zero.
 let num2 = 2;
