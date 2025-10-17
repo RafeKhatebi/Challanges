@@ -44,3 +44,17 @@ if (num2 == 0) {
 } else {
   console.log("num is = -");
 }
+
+// 5.	What are JavaScript closures? Provide an example.
+
+// A closure is a function that remembers its outer variables and can access them.
+function outerFunction() {
+  let outerVariable = "I'm from outer scope!";
+  function innerFunction() {
+    console.log(outerVariable);
+  }
+  return innerFunction;
+}
+
+const closure = outerFunction();
+closure(); // Output: I'm from outer scope!
