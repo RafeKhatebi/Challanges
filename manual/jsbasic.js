@@ -69,3 +69,15 @@ function factorial(n) {
 
 console.log(factorial(5)); // Output: 120
 console.log(factorial(3)); // Output: 6
+
+// 7.	How does this keyword work in JavaScript? Provide an example.
+// The this keyword refers to the object it belongs to. In a method,
+//  this refers to the owner object.
+const person = {
+  name: "Alice",
+  age: 30,
+  greet: function() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+};
+person.greet(); // Output: Hello, my name is Alice
