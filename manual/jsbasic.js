@@ -105,4 +105,3 @@ console.log(sumArray(numbers)); // Output: 15
 // Arrow functions provide a shorter syntax for writing functions and do not have their own this context.
 const add = (a, b) => a + b;
 console.log(add(2, 3)); // Output: 5
-
