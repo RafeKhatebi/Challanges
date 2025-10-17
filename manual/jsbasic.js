@@ -81,3 +81,10 @@ const person = {
   }
 };
 person.greet(); // Output: Hello, my name is Alice
+
+// 8.	Explain the concept of hoisting in JavaScript.
+// Hoisting is JavaScript's default behavior of moving declarations to the top.
+// For example:
+console.log(hoistedVar); // Output: undefined
+var hoistedVar = 5;
+
