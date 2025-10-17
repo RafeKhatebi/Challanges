@@ -103,3 +103,15 @@ if (sideA + sideB > sideC && sideA + sideC > sideB && sideB + sideC > sideA) {
 } else {
   console.log("Triangle is not valid.");
 }
+
+// 6.	Speeding Ticket Calculator
+let speed = 65;
+if (speed <= 60) {
+  console.log("No fine.");
+} else {
+  let fine = 100;
+  if (speed > 100) {
+    fine *= 2;
+  }
+  console.log("Fine: $" + fine);
+}
