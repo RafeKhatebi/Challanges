@@ -76,9 +76,9 @@ console.log(factorial(3)); // Output: 6
 const person = {
   name: "Alice",
   age: 30,
-  greet: function() {
+  greet: function () {
     console.log(`Hello, my name is ${this.name}`);
-  }
+  },
 };
 person.greet(); // Output: Hello, my name is Alice
 
@@ -96,3 +96,13 @@ function sumArray(arr) {
   }
   return sum;
 }
+
+// Example usage:
+const numbers = [1, 2, 3, 4, 5];
+console.log(sumArray(numbers)); // Output: 15
+
+// 10.	What are arrow functions in JavaScript, and how are they different from regular functions? */
+// Arrow functions provide a shorter syntax for writing functions and do not have their own this context.
+const add = (a, b) => a + b;
+console.log(add(2, 3)); // Output: 5
+
