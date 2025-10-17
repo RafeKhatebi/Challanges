@@ -44,3 +44,64 @@ if (num2 == 0) {
 } else {
   console.log("num is = -");
 }
+
+// 5.	What are JavaScript closures? Provide an example.
+
+// A closure is a function that remembers its outer variables and can access them.
+function outerFunction() {
+  let outerVariable = "I'm from outer scope!";
+  function innerFunction() {
+    console.log(outerVariable);
+  }
+  return innerFunction;
+}
+
+const closure = outerFunction();
+closure(); // Output: I'm from outer scope!
+
+// 6.	Write a function that calculates the factorial of a given number.
+function factorial(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+
+console.log(factorial(5)); // Output: 120
+console.log(factorial(3)); // Output: 6
+
+// 7.	How does this keyword work in JavaScript? Provide an example.
+// The this keyword refers to the object it belongs to. In a method,
+//  this refers to the owner object.
+const person = {
+  name: "Alice",
+  age: 30,
+  greet: function () {
+    console.log(`Hello, my name is ${this.name}`);
+  },
+};
+person.greet(); // Output: Hello, my name is Alice
+
+// 8.	Explain the concept of hoisting in JavaScript.
+// Hoisting is JavaScript's default behavior of moving declarations to the top.
+// For example:
+console.log(hoistedVar); // Output: undefined
+var hoistedVar = 5;
+
+// 9.	Write a function to find the sum of all numbers in an array.
+function sumArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+
+// Example usage:
+const numbers = [1, 2, 3, 4, 5];
+console.log(sumArray(numbers)); // Output: 15
+
+// 10.	What are arrow functions in JavaScript, and how are they different from regular functions? */
+// Arrow functions provide a shorter syntax for writing functions and do not have their own this context.
+const add = (a, b) => a + b;
+console.log(add(2, 3)); // Output: 5
