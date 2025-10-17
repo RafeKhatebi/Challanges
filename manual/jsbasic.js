@@ -68,3 +68,4 @@ function factorial(n) {
 }
 
 console.log(factorial(5)); // Output: 120
+console.log(factorial(3)); // Output: 6
