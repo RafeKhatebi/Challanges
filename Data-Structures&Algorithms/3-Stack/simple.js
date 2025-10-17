@@ -146,5 +146,7 @@ stack2.print(); // Output: 30 -> 20 -> 10 -> null
 console.log(stack2.pop()); // Output: 30
 console.log(stack2.peek()); // Output: 20
 stack2.print(); // Output: 20 -> 10 -> null
+ 
 
-//
+// 4.	Explain the purpose of push() and pop() in a stack.
+// The push() method is used to add an element to the top of the stack, while the pop() method is used to remove and return the top element from the stack. These operations adhere to the LIFO (Last In, First Out) principle of stacks.
