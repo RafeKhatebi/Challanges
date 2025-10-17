@@ -88,3 +88,11 @@ person.greet(); // Output: Hello, my name is Alice
 console.log(hoistedVar); // Output: undefined
 var hoistedVar = 5;
 
+// 9.	Write a function to find the sum of all numbers in an array.
+function sumArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
