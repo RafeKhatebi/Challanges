@@ -156,3 +156,5 @@ if (unitsConsumed <= 100) {
   bill = 100 * 0.5 + 100 * 0.75 + 300 * 1.2 + (unitsConsumed - 500) * 1.5;
 }
 console.log("Electricity Bill: $" + bill);
+console.log();
+
