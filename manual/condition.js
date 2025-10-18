@@ -142,3 +142,17 @@ if (bmi < 18.5) {
 } else {
   console.log("Obese");
 }
+
+// 9.	Electricity Bill Calculator
+let unitsConsumed = 250;
+let bill = 0;
+if (unitsConsumed <= 100) {
+  bill = unitsConsumed * 0.5;
+} else if (unitsConsumed <= 200) {
+  bill = 100 * 0.5 + (unitsConsumed - 100) * 0.75;
+} else if (unitsConsumed <= 500) {
+  bill = 100 * 0.5 + 100 * 0.75 + (unitsConsumed - 200) * 1.2;
+} else {
+  bill = 100 * 0.5 + 100 * 0.75 + 300 * 1.2 + (unitsConsumed - 500) * 1.5;
+}
+console.log("Electricity Bill: $" + bill);
