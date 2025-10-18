@@ -156,5 +156,32 @@ if (unitsConsumed <= 100) {
   bill = 100 * 0.5 + 100 * 0.75 + 300 * 1.2 + (unitsConsumed - 500) * 1.5;
 }
 console.log("Electricity Bill: $" + bill);
-console.log();
+console.log(bill);
 
+// 10.	Password Strength Checker
+let password = "XXXXXXXXXXX";
+let hasUppercase = false;
+let hasLowercase = false;
+let hasNumber = false;
+let isStrong = false;
+let isWeak = false;
+let message = false;
+if (password.length >= 8) {
+  for (let i = 0; i < password.length; i++) {
+    let char = password.charAt(i);
+    if (char >= "A" && char <= "Z") {
+      hasUppercase = true;
+    } else if (char >= "a" && char <= "z") {
+      hasLowercase = true;
+    } else if (char >= "0" && char <= "9") {
+      hasNumber = true;
+    }
+  }
+  if (hasUppercase && hasLowercase && hasNumber) {
+    isStrong = true;
+  } else {
+    isWeak = true;
+  }
+} else {
+  message = true;
+}
