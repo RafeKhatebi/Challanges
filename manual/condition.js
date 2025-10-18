@@ -128,3 +128,17 @@ if (withdrawalAmount >= accountBalance) {
 } else {
   console.log("Withdrawal successful.");
 }
+
+// 8.	Body Mass Index (BMI) Calculator
+let weight = 70;
+let height = 1.75;
+let bmi = weight / (height * height);
+if (bmi < 18.5) {
+  console.log("Underweight");
+} else if (bmi >= 18.5 && bmi < 25) {
+  console.log("Normal weight");
+} else if (bmi >= 25 && bmi < 30) {
+  console.log("Overweight");
+} else {
+  console.log("Obese");
+}
