@@ -21,6 +21,7 @@ Given three sides of a triangle, check if they form a valid triangle. The sum of
 •	If a driver goes above the speed limit, they get a fine.
 •	If they are driving over 100 km/h, they get double the fine.
 •	Implement a program that takes speed as input and determines the fine.
+
 7.	ATM Withdrawal
 •	A person wants to withdraw money from an ATM.
 •	If the withdrawal amount is a multiple of 10, allow withdrawal.
@@ -114,4 +115,16 @@ if (speed <= 60) {
     fine *= 2;
   }
   console.log("Fine: $" + fine);
+}
+
+// 7.	ATM Withdrawal
+let withdrawalAmount = 50;
+let accountBalance = 1000;
+
+if (withdrawalAmount >= accountBalance) {
+  log("Insufficient Funds");
+} else if (withdrawalAmount % 10 !== 0) {
+  console.log("Error: Amount must be a multiple of 10.");
+} else {
+  console.log("Withdrawal successful.");
 }
