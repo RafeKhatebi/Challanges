@@ -21,6 +21,7 @@ Given three sides of a triangle, check if they form a valid triangle. The sum of
 •	If a driver goes above the speed limit, they get a fine.
 •	If they are driving over 100 km/h, they get double the fine.
 •	Implement a program that takes speed as input and determines the fine.
+
 7.	ATM Withdrawal
 •	A person wants to withdraw money from an ATM.
 •	If the withdrawal amount is a multiple of 10, allow withdrawal.
@@ -114,4 +115,73 @@ if (speed <= 60) {
     fine *= 2;
   }
   console.log("Fine: $" + fine);
+}
+
+// 7.	ATM Withdrawal
+let withdrawalAmount = 50;
+let accountBalance = 1000;
+
+if (withdrawalAmount >= accountBalance) {
+  log("Insufficient Funds");
+} else if (withdrawalAmount % 10 !== 0) {
+  console.log("Error: Amount must be a multiple of 10.");
+} else {
+  console.log("Withdrawal successful.");
+}
+
+// 8.	Body Mass Index (BMI) Calculator
+let weight = 70;
+let height = 1.75;
+let bmi = weight / (height * height);
+if (bmi < 18.5) {
+  console.log("Underweight");
+} else if (bmi >= 18.5 && bmi < 25) {
+  console.log("Normal weight");
+} else if (bmi >= 25 && bmi < 30) {
+  console.log("Overweight");
+} else {
+  console.log("Obese");
+}
+
+// 9.	Electricity Bill Calculator
+let unitsConsumed = 250;
+let bill = 0;
+if (unitsConsumed <= 100) {
+  bill = unitsConsumed * 0.5;
+} else if (unitsConsumed <= 200) {
+  bill = 100 * 0.5 + (unitsConsumed - 100) * 0.75;
+} else if (unitsConsumed <= 500) {
+  bill = 100 * 0.5 + 100 * 0.75 + (unitsConsumed - 200) * 1.2;
+} else {
+  bill = 100 * 0.5 + 100 * 0.75 + 300 * 1.2 + (unitsConsumed - 500) * 1.5;
+}
+console.log("Electricity Bill: $" + bill);
+console.log(bill);
+
+// 10.	Password Strength Checker
+let password = "XXXXXXXXXXX";
+let hasUppercase = false;
+let hasLowercase = false;
+let hasNumber = false;
+let isStrong = false;
+let isWeak = false;
+let message = false;
+if (password.length >= 8) {
+  for (let i = 0; i < password.length; i++) {
+    let char = password.charAt(i);
+    if (char >= "A" && char <= "Z") {
+      hasUppercase = true;
+    } else if (char >= "a" && char <= "z") {
+      hasLowercase = true;
+    } else if (char >= "0" && char <= "9") {
+      hasNumber = true;
+    }
+  }
+  if (hasUppercase && hasLowercase && hasNumber) {
+    isStrong = true;
+  } else {
+    isWeak = true;
+  }
+} else {
+  message = true;
 }
