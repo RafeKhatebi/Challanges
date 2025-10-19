@@ -86,3 +86,22 @@ while (n !== 1) {
   steps++;
 }
 console.log("Steps to reach 1:", steps);
+
+
+// 13.	Find GCD (Greatest Common Divisor)
+//Algorithm
+//1. Take two integer inputs a and b.
+//2. Use a while loop that continues as long as b is not equal to 0.
+//   a. Inside the loop, store the value of b in a temporary variable temp.
+//   b. Update b to be the remainder of a divided by b (a % b).
+//   c. Update a to be the value of temp.
+//3. After the loop, a will contain the GCD of the original two numbers.
+//4. Print the GCD.
+let a = 48;
+let b = 18;
+while (b !== 0) {
+  let temp = b;
+  b = a % b;
+  a = temp;
+}
+console.log("GCD is:", a);
