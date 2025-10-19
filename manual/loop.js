@@ -1,0 +1,66 @@
+/* 
+11.	Armstrong Number
+A number is an Armstrong number if the sum of its digits raised to the power of the number of digits equals the number itself.
+Example: 153 = (1³ + 5³ + 3³) = 153
+Write a program that checks if a given number is an Armstrong number.
+12.	Collatz Sequence (Hailstone Numbers)
+•	Take a number n.
+•	If n is even, divide it by 2.
+•	If n is odd, multiply it by 3 and add 1.
+•	Repeat this process until n = 1.
+•	Count how many steps it takes to reach 1.
+13.	Find GCD (Greatest Common Divisor)
+•	Given two numbers, find their GCD using a loop.
+14.	Pattern Printing - Pyramid
+Write a program that prints this pattern for N = 5:
+   *  
+  ***  
+ *****  
+*******   
+15. Number Guessing Game
+- The program randomly selects a number between 1 and 100.
+- The user must guess the number.
+- The program gives hints like "Too High" or "Too Low".
+- The loop continues until the user guesses correctly.
+3. Functions – Practical Exercises
+Easy
+1.	Convert Celsius to Fahrenheit
+Write a function celsiusToFahrenheit(celsius) that converts a temperature from Celsius to Fahrenheit using the formula:
+F=(C×95)+32F = (C \times \frac{9}{5}) + 32F=(C×59)+32
+2.	Find the Maximum of Three Numbers
+Implement a function maxOfThree(a, b, c) that returns the largest of three numbers.
+3.	Check Even or Odd
+Create a function isEven(number) that returns true if the number is even and false otherwise.
+4.	Count Vowels in a String
+Write a function countVowels(str) that takes a string and returns the number of vowels in it.
+5.	Reverse a String
+Implement reverseString(str), which takes a string and returns it reversed.
+Example: "hello" → "olleh"
+*/
+
+// 11.	Armstrong Number
+//Algorithm
+//1. Take an integer input num.
+//2. Initialize a variable temp to store the value of num.
+//3. Initialize a variable sum to 0 to store the sum of the digits raised to the power of the number of digits.
+//4. Calculate the number of digits in num by converting it to a string and getting its length.
+//5. Use a while loop to iterate as long as temp is greater than 0.
+//   a. In each iteration, find the last digit (rem) of temp using the modulus operator (%).
+//   b. Raise rem to the power of digits and add it to sum.
+//   c. Remove the last digit from temp by performing integer division by 10.
+//6. After the loop, compare sum with the original num.
+//7. If they are equal, print that num is an Armstrong number; otherwise, print that it is not.
+let num = 153;
+let temp = num;
+let sum = 0;
+let digits = num.toString().length;
+while (temp > 0) {
+  let rem = temp % 10;
+  sum += rem ** digits;
+  temp = Math.floor(temp / 10);
+}
+if (sum === num) {
+  console.log(num + " is an Armstrong number");
+} else {
+  console.log(num + " is not an Armstrong number");
+}
