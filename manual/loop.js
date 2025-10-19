@@ -64,3 +64,25 @@ if (sum === num) {
 } else {
   console.log(num + " is not an Armstrong number");
 }
+
+
+// 12.	Collatz Sequence (Hailstone Numbers)
+//Algorithm
+//1. Take an integer input n.
+//2. Initialize a variable steps to 0 to count the number of steps taken to reach 1.
+//3. Use a while loop that continues as long as n is not equal to 1.
+//   a. If n is even (n % 2 === 0), divide n by 2.
+//   b. If n is odd, multiply n by 3 and add 1.
+//   c. Increment the steps counter by 1 in each iteration.
+//4. After the loop, print the number of steps taken to reach 1.
+let n = 6;
+let steps = 0;
+while (n !== 1) {
+  if (n % 2 === 0) {
+    n /= 2;
+  } else {
+    n = n * 3 + 1;
+  }
+  steps++;
+}
+console.log("Steps to reach 1:", steps);
