@@ -110,11 +110,15 @@ console.log("GCD is:", a);
 //1. Take an integer input N representing the number of rows for the pyramid.
 // without any methods and functions
 let N = 5;
+// Outer loop for each row
 for (let i = 1; i <= N; i++) {
+  // Inner loop for spaces and stars
   let row = "";
+  // Inner loop for spaces
   for (let j = 1; j <= N - i; j++) {
     row += " ";
   }
+  // Inner loop for stars
   for (let k = 1; k <= 2 * i - 1; k++) {
     row += "*";
   }
