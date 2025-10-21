@@ -124,3 +124,19 @@ for (let i = 1; i <= N; i++) {
   }
   console.log(row);
 }
+
+// 15. Number Guessing Game
+//Algorithm
+//1. Generate a random number between 1 and 100 and store it in a variable called secretNumber.
+let secretNumber = Math.floor(Math.random() * 100) + 1;
+let guess = null;
+while (guess !== secretNumber) {
+  guess = parseInt(prompt("Enter your guess (1-100):"), 10);
+  if (guess < secretNumber) {
+    console.log("Too low! Try again.");
+  } else if (guess > secretNumber) {
+    console.log("Too high! Try again.");
+  } else {
+    console.log("Congratulations! You've guessed the number.");
+  }
+}
