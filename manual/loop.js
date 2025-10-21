@@ -108,11 +108,15 @@ console.log("GCD is:", a);
 // 14.	Pattern Printing - Pyramid
 //Algorithm
 //1. Take an integer input N representing the number of rows for the pyramid.
+// without any methods and functions
 let N = 5;
 for (let i = 1; i <= N; i++) {
-  let spaces = " ".repeat(N - i);
-  let stars = "*".repeat(2 * i - 1);
-  console.log(spaces + stars);
+  let row = "";
+  for (let j = 1; j <= N - i; j++) {
+    row += " ";
+  }
+  for (let k = 1; k <= 2 * i - 1; k++) {
+    row += "*";
+  }
+  console.log(row);
 }
-
-
