@@ -65,7 +65,6 @@ if (sum === num) {
   console.log(num + " is not an Armstrong number");
 }
 
-
 // 12.	Collatz Sequence (Hailstone Numbers)
 //Algorithm
 //1. Take an integer input n.
@@ -87,7 +86,6 @@ while (n !== 1) {
 }
 console.log("Steps to reach 1:", steps);
 
-
 // 13.	Find GCD (Greatest Common Divisor)
 //Algorithm
 //1. Take two integer inputs a and b.
@@ -99,9 +97,22 @@ console.log("Steps to reach 1:", steps);
 //4. Print the GCD.
 let a = 48;
 let b = 18;
+// Using Euclidean algorithm to find GCD
 while (b !== 0) {
   let temp = b;
   b = a % b;
   a = temp;
 }
 console.log("GCD is:", a);
+
+// 14.	Pattern Printing - Pyramid
+//Algorithm
+//1. Take an integer input N representing the number of rows for the pyramid.
+let N = 5;
+for (let i = 1; i <= N; i++) {
+  let spaces = " ".repeat(N - i);
+  let stars = "*".repeat(2 * i - 1);
+  console.log(spaces + stars);
+}
+
+
